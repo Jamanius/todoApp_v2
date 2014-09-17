@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :todo_lists
+  resources :todo_lists do 
+    resources :todo_items #gives us differnet routs to work with 
+  end
   root 'todo_lists#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
